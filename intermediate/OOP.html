@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOP</title>
+</head>
+<body>
+	<script>
+		function personConstructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.greet = function() {
+        console.log("Hello my name is " + this.name + " and I am " + this.age + " years old!");
+    }
+}
+const emily = new personConstructor("Emily", 22);
+// using this & new, we can now refer to the 'name' attribute of our instance!
+emily.greet = function() {
+    console.log("My name is " + this.name + " and I'm the coolest ever!");
+}
+
+	</script>
+
+</body>
+</html>

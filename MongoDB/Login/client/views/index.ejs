@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Register</title>
+</head>
+<body>
+	<form action="/register" method="POST">
+		<table>
+			<tr>
+				<td><input type="text" name="name" placeholder="name"></td>
+			</tr>
+						<tr>
+				<td><input type="text" name="email" placeholder="email"></td>
+			</tr>
+			<tr>
+				<td><input type="password" name="password" placeholder="password"></td>
+			</tr>
+			<tr>
+				<td><button type="submit" value="submit">Register</button></td>
+			</tr>
+		</table>
+	</form>
+	<form action="/login" method="POST">
+		<table>
+			<tr>
+				<td><input type="text" name="email" placeholder="email"></td>
+			</tr>
+			<tr>
+				<td><input type="password" name="password" placeholder="password"></td>
+			</tr>
+			<tr>
+				<td><button type="submit" value="submit">login</button></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

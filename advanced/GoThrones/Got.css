@@ -1,0 +1,23 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper div img {
+	height: 180px;
+	width: 250px;
+}
+#wrapper {
+	display: flex;
+	width: 1160px;
+	background-color: grey;
+}
+#wrapper div {
+	margin: 20px;
+}
+.content {
+	width: 1160px;
+	height: 400px;
+	color:white;
+	background-color: #12151f;
+	overflow: scroll;
+}

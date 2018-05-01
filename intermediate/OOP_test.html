@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOP</title>
+</head>
+<body>
+	<script>
+	// the naming convention for Classes and Object Constructors is that they're capitalized and singular
+function Person(name, age) {
+    const self = this;
+    const privateVariable = "This variable is private";
+    const privateMethod = function() {
+        console.log("this is private method for " + self.name + " "+ self.age);
+        console.log(self);
+    }
+    this.name = name;
+    this.age = age;
+    this.greet = function() {
+        console.log("Hello my name is " + self.name + " and I am " + self.age + " years old!");
+        // we can access our attributes within the constructor!
+        console.log("Also my privateVariable says: " + privateVariable)
+        // we can access our methods within the constructor!
+        privateMethod();
+    }
+}
+const joe = new Person("Joe", 23);
+joe.greet();
+
+
+	</script>
+
+</body>
+</html>

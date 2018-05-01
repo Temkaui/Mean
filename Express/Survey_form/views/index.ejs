@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey</title>
+</head>
+<body>
+	<form action="/process" method="post">
+		<table>
+			<tr>
+				<td><label>Your Name:</label></td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td><label>Dojo Location:</label></td>
+				<td><select name="location">
+					<option>Mountain View</option>
+					<option>Washington DC</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Favorite Language:</label></td>
+				<td>
+					<select name="language">
+						<option>Python</option>
+						<option>Java</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Comment:</label></td>
+				<td><input type="text" name="comment"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button>Submit</button>
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+
+</body>
+</html>

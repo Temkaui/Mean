@@ -1,0 +1,91 @@
+newtab?ie=UTF-8:7 SW registered
+ninja Failed to load resource: net::ERR_FAILED
+thumb2/ Failed to load resource: net::ERR_FAILED
+var x = []
+undefined
+console.log(x)
+VM128:1 []
+undefined
+x.push("coding","dojo","rocks")
+3
+x.pop()
+"rocks"
+console.log(x)
+VM148:1 (2) ["coding", "dojo"]
+undefined
+const y = [];
+undefined
+console.log(y)
+VM157:1 []
+undefined
+y.push(88)
+1
+console.log(y)
+VM165:1 [88]
+undefined
+var z = [9,10,6,5,-1,20,13,2]
+undefined
+for(var i=0; i<z.length; i++){
+console.log(z[x]);
+}
+VM187:1 Uncaught SyntaxError: Unexpected token <
+for(var i=0; i<z.length; i++){
+console.log(z.x);
+}
+VM193:1 Uncaught SyntaxError: Unexpected token <
+for(var i=0; i<z.length; i++){
+console.log(z[i]);
+}
+VM201:1 Uncaught SyntaxError: Unexpected token <
+for(var i=0; i<z.length; i++){
+console.log(z[i]);
+};
+VM273:1 Uncaught SyntaxError: Unexpected token <
+for(var i=0; i<z.length; i++){
+console.log(z[i]);
+};
+VM277:1 Uncaught SyntaxError: Unexpected token <
+for(var i=0; i<z.length; i++){
+console.log(z[i]);
+};
+VM278:2 9
+VM278:2 10
+VM278:2 6
+VM278:2 5
+VM278:2 -1
+VM278:2 20
+VM278:2 13
+VM278:2 2
+undefined
+for(var i=0; i<z.length-1; i++){
+console.log(z[i]);
+};
+VM279:2 9
+VM279:2 10
+VM279:2 6
+VM279:2 5
+VM279:2 -1
+VM279:2 20
+VM279:2 13
+undefined
+var names = ["Kadie","Joe","Fritz","Pierre","Alphonso"]
+undefined
+console.log(names.length)
+VM296:1 5
+undefined
+for(var i=0; i<names.length; i++){
+if(names[i].length === 5){
+console.log(names[i]);
+}
+}
+VM329:3 Kadie
+VM329:3 Fritz
+undefined
+function yell("hello"){
+console.log("hello".toUpperCase());
+}
+VM343:1 Uncaught SyntaxError: Unexpected string
+function yell(string){
+console.log(string.toUpperCase());
+}
+undefined

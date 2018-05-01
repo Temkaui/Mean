@@ -1,0 +1,2050 @@
+Last login: Mon Apr  9 21:39:03 on ttys000
+Temuujins-MBP:~ temka$ mongo
+MongoDB shell version v3.4.14
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.14
+Server has startup warnings: 
+2018-04-06T14:52:20.664-0400 I CONTROL  [initandlisten] 
+2018-04-06T14:52:20.664-0400 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-04-06T14:52:20.664-0400 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] 
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] 
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+> db
+test
+> db.createCollection('ninjas')
+{ "ok" : 1 }
+> db.ninjas.insert({name: "Trey"
+... })
+WriteResult({ "nInserted" : 1 })
+> db.ninjas.insert({name: "micheal", status: "wise"})
+WriteResult({ "nInserted" : 1 })
+> cls
+
+> db.ninjas.find()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.ninjas.find()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.ninjas.find({)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.ninjas.find({})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.ninjas.find({})
+{ "_id" : ObjectId("5accc2b53fd1b753bb7c57ba"), "name" : "Trey" }
+{ "_id" : ObjectId("5accc2e83fd1b753bb7c57bb"), "name" : "micheal", "status" : "wise" }
+> db.ninjas.find().pretty()
+{ "_id" : ObjectId("5accc2b53fd1b753bb7c57ba"), "name" : "Trey" }
+{
+	"_id" : ObjectId("5accc2e83fd1b753bb7c57bb"),
+	"name" : "micheal",
+	"status" : "wise"
+}
+> db.ninjas.find({name:Trey}).pretty
+2018-04-10T10:00:02.142-0400 E QUERY    [thread1] ReferenceError: Trey is not defined :
+@(shell):1:17
+> db.ninjas.find({name:Trey}).pretty()
+2018-04-10T10:00:07.430-0400 E QUERY    [thread1] ReferenceError: Trey is not defined :
+@(shell):1:17
+> db.ninjas.find({name:"Trey"}).pretty()
+{ "_id" : ObjectId("5accc2b53fd1b753bb7c57ba"), "name" : "Trey" }
+> db.ninjas.remove({name: "Trey"})
+WriteResult({ "nRemoved" : 1 })
+> dn.ninjas.find().pretty()
+2018-04-10T10:04:03.624-0400 E QUERY    [thread1] ReferenceError: dn is not defined :
+@(shell):1:1
+> db.ninjas.fin().pretty()
+2018-04-10T10:04:21.695-0400 E QUERY    [thread1] TypeError: db.ninjas.fin is not a function :
+@(shell):1:1
+> db.ninjas.find().pretty()
+{
+	"_id" : ObjectId("5accc2e83fd1b753bb7c57bb"),
+	"name" : "micheal",
+	"status" : "wise"
+}
+> db.ninjas.insert({name: "Trey", status: "hungry", belt: "black"})
+WriteResult({ "nInserted" : 1 })
+> db.ninjas.insert({name: "Trey", status: "more hungry", belt: "red"})
+WriteResult({ "nInserted" : 1 })
+> db.ninjas.find().pretty()
+{
+	"_id" : ObjectId("5accc2e83fd1b753bb7c57bb"),
+	"name" : "micheal",
+	"status" : "wise"
+}
+{
+	"_id" : ObjectId("5accc51f3fd1b753bb7c57bc"),
+	"name" : "Trey",
+	"status" : "hungry",
+	"belt" : "black"
+}
+{
+	"_id" : ObjectId("5accc5363fd1b753bb7c57bd"),
+	"name" : "Trey",
+	"status" : "more hungry",
+	"belt" : "red"
+}
+> db.ninjas.remove({name: "Trey", True )
+... 
+... }
+2018-04-10T10:13:12.637-0400 E QUERY    [thread1] SyntaxError: missing : after property id @(shell):1:37
+> db.ninjas.remove({name: "Trey", True })
+2018-04-10T10:13:18.994-0400 E QUERY    [thread1] ReferenceError: True is not defined :
+@(shell):1:33
+> db.ninjas.remove({name: "Trey"}, true)
+WriteResult({ "nRemoved" : 1 })
+> db.ninjas.find().pretty()
+{
+	"_id" : ObjectId("5accc2e83fd1b753bb7c57bb"),
+	"name" : "micheal",
+	"status" : "wise"
+}
+{
+	"_id" : ObjectId("5accc5363fd1b753bb7c57bd"),
+	"name" : "Trey",
+	"status" : "more hungry",
+	"belt" : "red"
+}
+> cls
+
+> db.collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.collection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.collectio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.collecti
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.collect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.collec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.colle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.coll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.col
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.co
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.creates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcollection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcollectio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcollecti
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcollect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcollec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcolle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcoll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createcol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createco
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createschema
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createschem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createsche
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createsch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createsc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.creates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createSchema
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createSchem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createSche
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createSch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createSc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.createS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.create
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.creat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.crea
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.cre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.cr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  use
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  u
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  show dbs'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  show dbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  show dbs
+admin  0.000GB
+local  0.000GB
+test   0.000GB
+> ^C
+bye
+Temuujins-MBP:~ temka$ 
+Temuujins-MBP:~ temka$ mongo
+MongoDB shell version v3.4.14
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.14
+Server has startup warnings: 
+2018-04-06T14:52:20.664-0400 I CONTROL  [initandlisten] 
+2018-04-06T14:52:20.664-0400 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-04-06T14:52:20.664-0400 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] 
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] 
+2018-04-06T14:52:20.665-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+> show dbs
+admin  0.000GB
+local  0.000GB
+test   0.000GB
+> use my_first_db
+switched to db my_first_db
+> db.createCollection("student")
+{ "ok" : 1 }
+> db.student.insert({name: "Tom", home_state: "Virginia", lucky_number: 5, birthday: {month: 12, day: 20, year: 2017}})
+WriteResult({ "nInserted" : 1 })
+> show collections
+student
+> show documents
+2018-04-10T11:42:00.789-0400 E QUERY    [thread1] Error: don't know how to show [documents] :
+shellHelper.show@src/mongo/shell/utils.js:919:11
+shellHelper@src/mongo/shell/utils.js:672:15
+@(shellhelp2):1:1
+> db.student.find({})
+{ "_id" : ObjectId("5accdb375b5b1c44cc7d49db"), "name" : "Tom", "home_state" : "Virginia", "lucky_number" : 5, "birthday" : { "month" : 12, "day" : 20, "year" : 2017 } }
+> db.student.insert({name: "Jim", home_state: "Washington DC", lucky_number: 3, birthday: {month: 1, day: 2, year: 2000}})
+WriteResult({ "nInserted" : 1 })
+> db.student.insert({name: "Tim", home_state: "Maryland", lucky_number: 6, birthday: {month: 10, day: 20, year: 1980}})
+WriteResult({ "nInserted" : 1 })
+> db.student.find({})
+{ "_id" : ObjectId("5accdb375b5b1c44cc7d49db"), "name" : "Tom", "home_state" : "Virginia", "lucky_number" : 5, "birthday" : { "month" : 12, "day" : 20, "year" : 2017 } }
+{ "_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"), "name" : "Jim", "home_state" : "Washington DC", "lucky_number" : 3, "birthday" : { "month" : 1, "day" : 2, "year" : 2000 } }
+{ "_id" : ObjectId("5accdc195b5b1c44cc7d49dd"), "name" : "Tim", "home_state" : "Maryland", "lucky_number" : 6, "birthday" : { "month" : 10, "day" : 20, "year" : 1980 } }
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	}
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.find({home_state: virginia}).pretty()
+2018-04-10T11:47:04.557-0400 E QUERY    [thread1] ReferenceError: virginia is not defined :
+@(shell):1:18
+> db.student.find({home_state: "virginia"}).pretty()
+> db.student.find({home_state: "virginia"})
+> db.student.find({home_state: "Virginia"})
+{ "_id" : ObjectId("5accdb375b5b1c44cc7d49db"), "name" : "Tom", "home_state" : "Virginia", "lucky_number" : 5, "birthday" : { "month" : 12, "day" : 20, "year" : 2017 } }
+> db.student.find({home_state: "Virginia"}).pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	}
+}
+> db.student.fin({lucky_number: $gt3}).pretty()
+2018-04-10T11:50:01.993-0400 E QUERY    [thread1] ReferenceError: $gt3 is not defined :
+@(shell):1:17
+> db.student.fin({lucky_number: {$gt:3}}).pretty()
+2018-04-10T11:50:52.527-0400 E QUERY    [thread1] TypeError: db.student.fin is not a function :
+@(shell):1:1
+> db.student.find({lucky_number: {$gt:3}}).pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.find({lucky_number: {$lte:10}}).pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	}
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.find({lucky_number: {$gt:1}, {lte:9}}).pretty()
+2018-04-10T11:53:38.363-0400 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:40
+> db.student.find({lucky_number: {$gt:1, lte:9}}).pretty()
+Error: error: {
+	"ok" : 0,
+	"errmsg" : "unknown operator: lte",
+	"code" : 2,
+	"codeName" : "BadValue"
+}
+> db.student.find({lucky_number: {$gte:1, $lte:9}}).pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	}
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.update({$set: {interests:["coding", "playing"]
+... }})
+2018-04-10T11:58:27.501-0400 E QUERY    [thread1] Error: need an object :
+DBCollection.prototype._parseUpdate@src/mongo/shell/collection.js:515:1
+DBCollection.prototype.update@src/mongo/shell/collection.js:552:18
+@(shell):1:1
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	}
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.update({},{$set: {interests:["coding", "playing"] }})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"coding",
+		"playing"
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.update({},{$addToSet: {interests:["coding", "playing"] }})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"coding",
+		"playing",
+		[
+			"coding",
+			"playing"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	}
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	}
+}
+> db.student.update({QUERY},{$addToSet: {interests:["coding", "playing"] }})
+2018-04-10T12:02:07.567-0400 E QUERY    [thread1] ReferenceError: QUERY is not defined :
+@(shell):1:20
+> db.student.update({},{$addToSet: {interests:["coding", "playing"] }},{multi: true})
+WriteResult({ "nMatched" : 3, "nUpserted" : 0, "nModified" : 2 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"coding",
+		"playing",
+		[
+			"coding",
+			"playing"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	},
+	"interests" : [
+		[
+			"coding",
+			"playing"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	},
+	"interests" : [
+		[
+			"coding",
+			"playing"
+		]
+	]
+}
+> db.student.update({},{$addToSet: {interests:["MongoDB"] }},{multi: true})
+WriteResult({ "nMatched" : 3, "nUpserted" : 0, "nModified" : 3 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"coding",
+		"playing",
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	},
+	"interests" : [
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	},
+	"interests" : [
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		]
+	]
+}
+> db.student.update({},{$addToSet: {interests:"test" }},{multi: true})
+WriteResult({ "nMatched" : 3, "nUpserted" : 0, "nModified" : 3 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"coding",
+		"playing",
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		],
+		"test"
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	},
+	"interests" : [
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		],
+		"test"
+	]
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	},
+	"interests" : [
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		],
+		"test"
+	]
+}
+> db.student.update({},{$pop: {interests:(-1) }},{multi: true})
+WriteResult({ "nMatched" : 3, "nUpserted" : 0, "nModified" : 3 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"playing",
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		],
+		"test"
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	},
+	"interests" : [
+		[
+			"MongoDB"
+		],
+		"test"
+	]
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	},
+	"interests" : [
+		[
+			"MongoDB"
+		],
+		"test"
+	]
+}
+> db.student.update({},{$pop: {interests:(1) }},{multi: true})
+WriteResult({ "nMatched" : 3, "nUpserted" : 0, "nModified" : 3 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"playing",
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	},
+	"interests" : [
+		[
+			"MongoDB"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdc195b5b1c44cc7d49dd"),
+	"name" : "Tim",
+	"home_state" : "Maryland",
+	"lucky_number" : 6,
+	"birthday" : {
+		"month" : 10,
+		"day" : 20,
+		"year" : 1980
+	},
+	"interests" : [
+		[
+			"MongoDB"
+		]
+	]
+}
+> db.student.remove({home_state: "Maryland"})
+WriteResult({ "nRemoved" : 1 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"playing",
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		]
+	]
+}
+{
+	"_id" : ObjectId("5accdbd05b5b1c44cc7d49dc"),
+	"name" : "Jim",
+	"home_state" : "Washington DC",
+	"lucky_number" : 3,
+	"birthday" : {
+		"month" : 1,
+		"day" : 2,
+		"year" : 2000
+	},
+	"interests" : [
+		[
+			"MongoDB"
+		]
+	]
+}
+> db.student.remove({name: "Jim"})
+WriteResult({ "nRemoved" : 1 })
+> db.student.find().pretty()
+{
+	"_id" : ObjectId("5accdb375b5b1c44cc7d49db"),
+	"name" : "Tom",
+	"home_state" : "Virginia",
+	"lucky_number" : 5,
+	"birthday" : {
+		"month" : 12,
+		"day" : 20,
+		"year" : 2017
+	},
+	"interests" : [
+		"playing",
+		[
+			"coding",
+			"playing"
+		],
+		[
+			"MongoDB"
+		]
+	]
+}
+> 

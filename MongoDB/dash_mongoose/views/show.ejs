@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animal</title>
+</head>
+<body>
+	<% for (let x in animal) {%>
+		<h3><%=animal[x].type_name%></h3>
+		<p><%=animal[x].info%></p>
+	
+	</div>
+	<button><a href="/">Go to Animals Page</a></button>
+	<button><a href="/mongooses/edit/<%= animal[x]._id%>">Edit</a></button>
+	<button><a href="/mongooses/new">Add New Animal</a></button>
+	<%}%>
+
+
+	<% if(typeof(errors) != 'undefined' ) { %>
+    	<% for (var x in errors) { %>
+    		<h3><%= errors[x].message %></h3>
+    	<% } %>
+	<% } %>
+</body>
+</html>

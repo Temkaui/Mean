@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Hunting Github</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <button id="show">clickme</button>
+  <h1 id="info"></h1>  
+  <script type="text/javascript">
+    $('#show').click(function(){
+      $('#info').html("");
+      $.get("https://api.github.com/users/temkaui", displayName)
+      function displayName(data){
+        $('#info').append('Name: ' + data.name);
+      }
+    })
+    
+  </script>
+</body>
+</html>

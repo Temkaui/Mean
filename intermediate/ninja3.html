@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja III</title>
+</head>
+<body>
+	<script>
+		class Ninja{
+			constructor(name){
+				this.strength = 3;
+				this.speed = 3;
+				this.name = name;
+				this.health = 100;
+			}
+			
+			sayName(){
+				console.log('My ninja name is ' + this.name);
+				return this;
+			}
+			showStats(){
+				console.log('Name: ' + this.name + ', Health: ' + this.health + ', Speed: ' + this.speed + ', Strength: ' + this.strength);
+				return this;
+			}
+			drinkSake(){
+				this.health += 10;
+				return this;
+			}
+
+			punch(enemy){
+				enemy.health -= 5;
+				console.log(enemy.name + " was punched by " + this.name + " and lost 5 health");
+				return this;
+			}
+			kick(enemy){
+				this.health -= (15 * this.strength);
+				console.log(enemy.name + " was kicked by " + this.name + " and lost " +(15*this.strength) +" health");
+				return this;
+			}
+		}
+
+		class Sensei extends Ninja{
+			constructor(name){
+				super(name);
+				this.health = 200;
+				this.speed = 10;
+				this.strength = 10;
+				this.wisdom = 10;
+			}
+			speakWisdom(){
+				super.drinkSake();
+				console.log("What one programmer can do in one month, two programmers can do in two months.")
+
+			}
+		}
+		const blueNinja = new Ninja("Goemon");
+		const redNinja = new Ninja("Bill Gates");
+		redNinja.punch(blueNinja);
+		blueNinja.kick(redNinja);
+
+		const superSensei = new Sensei("Master Splinter");
+		superSensei.speakWisdom();
+		superSensei.showStats();
+
+
+	</script>
+
+</body>
+</html>

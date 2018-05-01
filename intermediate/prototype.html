@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOP</title>
+</head>
+<body>
+	<script>
+// 	// the naming convention for Classes and Object Constructors is that they're capitalized and singular
+// const MyObjConstructor = function(name) {
+//   const myPrivateVar = "Hello"; // just to show that it is hard to see this private var easily
+//   this.name = name; // but you can see the name!
+//   this.method = function() {
+//     console.log( "I am a method");
+//   };
+// }
+// const obj1 = new MyObjConstructor('object1');
+// const obj2 = new MyObjConstructor('object2');
+// console.log(obj1);
+
+// obj1.newProperty = "newProperty!";
+// obj1.__proto__.anotherProperty = "anotherProperty!";
+// console.log(obj1.anotherProperty); // anotherProperty!
+// console.log(obj1.newProperty); // newProperty!
+// // What about obj2?
+// console.log(obj2.newProperty); // undefined
+// console.log(obj2.anotherProperty); // anotherProperty! <= THIS IS THE COOL PART!
+
+
+
+// function Cat(catName) {
+//   const name = catName;
+//   this.getName = function() {
+//     return name;
+//   };
+// }
+// //adding a method to the cat prototype
+// Cat.prototype.sayHi = function() {
+//   console.log('meow');
+// };
+// //adding properties to the cat prototype
+// Cat.prototype.numLegs = 4;
+// const muffin = new Cat('muffin');
+// const biscuit = new Cat('biscuit');
+// console.log(muffin, biscuit);
+// //we access prototype properties the same way as we would access 'own' properties
+// muffin.sayHi();
+// biscuit.sayHi();
+// console.log(muffin.numLegs);
+// // poor mutant cats: muffin.__proto__.numLegs ++;
+// // doing this to muffin will mess up all the cats!
+
+
+
+// Private variables are scoped to the constructor with the 'let' keyword
+function Car(make, model) {
+    let odometer = 0;
+    this.make = make;
+    this.model = model;
+    
+    // To make functions private, we scope them to the constructor
+    function updateOdometer(distance) {
+        odometer += distance;
+    };
+    
+    // 'Getter' functions help us read private variables
+    this.readOdometer = function() {
+      return odometer;
+    }
+    
+    // 'Setter' functions help us update private variables
+    this.drive = function(distance) {
+      updateOdometer(distance);
+      // return this will allow us to chain methods
+      return this;
+    }
+}
+const myCarInstance = new Car("Chevy", "Camaro");
+// by returning this, we can chain drive()
+myCarInstance.drive(50).drive(90); 
+// private variable is undefined
+console.log(myCarInstance.odometer);
+// but we can read it with our getter function
+console.log(myCarInstance.readOdometer());
+
+
+
+	</script>
+
+</body>
+</html>

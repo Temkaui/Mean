@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Hunting Github</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <button id="show">clickme</button>
+  <h1 id="target"></h1>
+  <button id="hover">Hover me</button>
+  <script type="text/javascript">
+    const $Dojo = function (id) {
+    return (function () {
+        var el = document.getElementById(id);
+        click: function (callback) {
+            el.addEventListener("click", callback);
+        };
+    
+        hover: function (hoverinCall, hoveroutCall=hoverinCall) {
+            el.addEventListener("mouseover", hoverinCall);
+            el.addEventListener("mouseout", hoveroutCall);
+        };
+    
+        return;
+    }());
+}
+$Dojo("show").click(function() { console.log("The button was clicked!") });
+$Dojo("hover").hover(function() { console.log("The button was hovered on!") });
+// testing
+
+$Dojo('test').click(function() {
+    console.log("This button got CLICKED!");
+});
+$Dojo('test2').hover(function() { 
+    console.log("You hovered into this div!");
+}, function() {
+    console.log("You hovered out of this div!");
+});
+$Dojo('test3').hover(function() {
+    console.log("My mouseover functions are the same!");
+});
+  </script>
+</body>
+</html>

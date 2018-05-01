@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<script>
+		// This is a function that just prints the result of another list of instructions
+// function printResult(doSomething) {
+//  var result = doSomething();         // store the return value of the callback parameter
+//  console.log(result);                // print the result!
+// }
+// printResult(function returnFive(){ return 5 })  // this should print "5"
+
+function each(arr, callback) {
+  // loop through the array
+  for(var i = 0; i < arr.length; i++) {
+    callback(arr[i]); // invoking the callback many times... delegation!
+  }
+}
+// call the each function
+each([1,2,3], function(num) { alert(num + " I am from the callback!"); }) //so many alerts!
+
+
+
+	</script>
+
+</body>
+</html>

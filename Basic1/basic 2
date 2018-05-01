@@ -1,0 +1,44 @@
+ function magic_multiply(x, y) {
+      if (x == 0 && y == 0) {
+        return `All inputs ${x * y}`;
+      }
+      if (Array.isArray(x)) {
+        for (let i = 0; i < x.length; i++) {
+          x[i] *= y;
+        }
+        return x;
+      }
+      if (typeof y === 'string') {
+        return "Error: Can not multiply by string";
+      }
+      if (typeof x === 'string') {
+        string_new = '';
+        while (y > 0) {
+          string_new += x;
+          y--;
+        }
+        return string_new
+      }
+      return x * y;
+    }
+undefined
+let test1 = magic_multiply(5, 2);
+console.log(test1);
+VM847:2 10
+undefined
+let test2 = magic_multiply(0, 0);
+console.log(test2);
+VM849:2 All inputs 0
+undefined
+let test3 = magic_multiply([1, 2, 3], 2);
+console.log(test3);
+VM851:2 (3) [2, 4, 6]
+undefined
+let test4 = magic_multiply(7, "three");
+console.log(test4);
+VM853:2 Error: Can not multiply by string
+undefined
+let test5 = magic_multiply("Brendo", 4);
+console.log(test5);
+VM855:2 BrendoBrendoBrendoBrendo
+undefined

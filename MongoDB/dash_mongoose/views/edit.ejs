@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animal</title>
+</head>
+<body>
+	<% for (let x in animal) {%>
+	<form action="/mongooses/edit" method="POST">
+	<%}%>
+		<table>
+			<tr>
+				<td><label>Type of animal:</label></td>
+				<td><input type="text" name="type_name"></td>
+			</tr>
+			<tr>
+				<td><label>Information:</label></td>
+				<td><input type="text" name="info"></td>
+			</tr>
+			<tr>
+				<td></label></td>
+				<td><button type="Submit" value="Submit">Submit</button></td>
+			</tr>
+		</table>
+	</form>
+	<button><a href="/">Go to Animals Page</a></button>
+
+
+	<% if(typeof(errors) != 'undefined' ) { %>
+    	<% for (var x in errors) { %>
+    		<h3><%= errors[x].message %></h3>
+    	<% } %>
+	<% } %>
+</body>
+</html>
